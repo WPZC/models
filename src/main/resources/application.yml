@@ -1,0 +1,27 @@
+server:
+  port: 8880
+spring:
+  application:
+    name: models
+  datasource:
+    name: db-base
+    url: jdbc:mysql://localhost:3306/authority?serverTimezone=GMT%2B8
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+  main:
+    allow-bean-definition-overriding: true
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.epyc.ycdbbase.viewentity
+
+
+fileurl:
+  savefile: D:/temp-rainy-oa/
+  getfile: http://192.168.1.27:8887/
